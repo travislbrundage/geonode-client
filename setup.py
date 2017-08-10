@@ -22,7 +22,7 @@ def get_version(version=None):
         )
         commit = _commit.communicate()[0].partition('\n')[0]
     except:
-        continue
+        pass
     if commit:
         version = "{}.{}".format(version, commit)
     return version
