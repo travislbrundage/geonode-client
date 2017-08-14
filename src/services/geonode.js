@@ -14,7 +14,7 @@ import 'whatwg-fetch';
 const createRequestObject = function(method, body, contentType = 'application/json') {
   return {
     method: method,
-    credentials: 'same-origin',
+    credentials: 'include',
     headers: {
       'Content-Type': contentType,
       'X-CSRFToken': getCRSFToken()
@@ -78,7 +78,7 @@ export const createThumbnail = (obj_id, map) => {
       reader.onloadend = function() {
         fetch(url, {
           method: 'POST',
-          credentials: "same-origin",
+          credentials: "include",
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
