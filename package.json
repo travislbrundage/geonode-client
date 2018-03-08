@@ -2,7 +2,7 @@
   "name": "geonode-viewer",
   "version": "1.0.0",
   "scripts": {
-    "start": "mkdir -p dist && node_modules/.bin/webpack-dev-server --progress --colors --hot --inline",
+    "start": "mkdir -p dist && node_modules/.bin/webpack-dev-server --progress --colors --hot --inline --port 5000",
     "build:js": "webpack",
     "build:gh-copy": "cp index-gh.html _build/index.html && cp dist/viewer.js _build/js/app.js && cp dist/composer.js _build/js/composer.js && cp -R resources/ol3-cesium/* _build/js/cesium/ && cp CNAME _build/CNAME && cp index-composer.html _build/composer/index.html",
     "build:gh-clean": "rm -rf _build/* ",
@@ -36,7 +36,7 @@
     "node": ">6"
   },
   "dependencies": {
-    "@boundlessgeo/sdk": "git://github.com/travislbrundage/sdk.git#14694eb922800260f3def129febde1bb3509419c",
+    "@boundlessgeo/sdk": "1.0.3",
     "core-js": "^2.4.1",
     "intl": "^1.2.5",
     "material-ui": "0.16.4",

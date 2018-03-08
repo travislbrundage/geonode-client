@@ -3,7 +3,7 @@ build/
 _build/
 *.swp
 geonode-client/static/geonode-client
-dist/
+
 .tmp
 coverage/
 reports/
